@@ -49,24 +49,26 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-//                randomJigsaw();
+                randomJigsaw();
             }
         }, 200);
     }
 
     /**
-     * 随机打乱顺序
+     * 游戏初始化，随机打乱顺序
      */
     private void randomJigsaw() {
         for (int i = 0; i < 100; i++) {
-            int type = (int) ((Math.random() * 4) + 1);
-            handleFlingGesture(type, false);
+            int gestureDirection = (int) ((Math.random() * 4) + 1);
+            handleFlingGesture(gestureDirection, false);
         }
     }
 
 
     /**
      * 初始化拼图碎片
+     *
+     * @param jigsawBitmap
      */
     private void initJigsaw(Bitmap jigsawBitmap) {
 
