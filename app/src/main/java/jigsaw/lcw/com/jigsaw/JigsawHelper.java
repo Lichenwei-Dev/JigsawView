@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
@@ -41,7 +40,7 @@ public class JigsawHelper {
      */
     public Bitmap getJigsaw(Context context) {
         //加载Bitmap原图,并获取宽高
-        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.abc);
+        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.img);
         int bitmapWidth = bitmap.getWidth();
         int bitmapHeight = bitmap.getHeight();
         //按屏幕宽铺满显示，算出缩放比例
